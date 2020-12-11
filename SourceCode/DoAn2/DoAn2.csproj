@@ -1,0 +1,672 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{50A524E0-9836-4733-A1FC-C6E83950DA13}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DoAn2</RootNamespace>
+    <AssemblyName>DoAn2</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DemoQuanLyDoAnTotNghiep2DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DemoQuanLyDoAnTotNghiep2DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DemoQuanLyDoAnTotNghiep2DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DemoQuanLyDoAnTotNghiep2DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DemoQuanLyDoAnTotNghiep2DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DemoQuanLyDoAnTotNghiep2DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DemoQuanLyDoAnTotNghiep2DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DemoQuanLyDoAnTotNghiep2DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmBoMon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBoMon.Designer.cs">
+      <DependentUpon>frmBoMon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDoiMatKhau.Designer.cs">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGiangVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGiangVien.Designer.cs">
+      <DependentUpon>frmGiangVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKhoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKhoa.Designer.cs">
+      <DependentUpon>frmKhoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangNhap.Designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReport.Designer.cs">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThanhVienThucHien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThanhVienThucHien.Designer.cs">
+      <DependentUpon>frmThanhVienThucHien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThongKeGiangVienHuongDan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongKeGiangVienHuongDan.Designer.cs">
+      <DependentUpon>frmThongKeGiangVienHuongDan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThongTinDoAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongTinDoAn.Designer.cs">
+      <DependentUpon>frmThongTinDoAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThongTinSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongTinSinhVien.Designer.cs">
+      <DependentUpon>frmThongTinSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrangChu.Designer.cs">
+      <DependentUpon>frmTrangChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmXuatDanhSachDoAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmXuatDanhSachDoAn.Designer.cs">
+      <DependentUpon>frmXuatDanhSachDoAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmXuatDanhSachSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmXuatDanhSachSinhVien.Designer.cs">
+      <DependentUpon>frmXuatDanhSachSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyDbContext.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyDbContext.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmBoMon.resx">
+      <DependentUpon>frmBoMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDoiMatKhau.resx">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGiangVien.resx">
+      <DependentUpon>frmGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKhoa.resx">
+      <DependentUpon>frmKhoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReport.resx">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThanhVienThucHien.resx">
+      <DependentUpon>frmThanhVienThucHien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThongKeGiangVienHuongDan.resx">
+      <DependentUpon>frmThongKeGiangVienHuongDan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThongTinDoAn.resx">
+      <DependentUpon>frmThongTinDoAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThongTinSinhVien.resx">
+      <DependentUpon>frmThongTinSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTrangChu.resx">
+      <DependentUpon>frmTrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmXuatDanhSachDoAn.resx">
+      <DependentUpon>frmXuatDanhSachDoAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmXuatDanhSachSinhVien.resx">
+      <DependentUpon>frmXuatDanhSachSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="TableReport.rdlc" />
+    <None Include="DemoQuanLyDoAnTotNghiep2DataSet2.xsc">
+      <DependentUpon>DemoQuanLyDoAnTotNghiep2DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DemoQuanLyDoAnTotNghiep2DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DemoQuanLyDoAnTotNghiep2DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DemoQuanLyDoAnTotNghiep2DataSet2.xss">
+      <DependentUpon>DemoQuanLyDoAnTotNghiep2DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DemoQuanLyDoAnTotNghiep2DataSet3.xsc">
+      <DependentUpon>DemoQuanLyDoAnTotNghiep2DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DemoQuanLyDoAnTotNghiep2DataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DemoQuanLyDoAnTotNghiep2DataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DemoQuanLyDoAnTotNghiep2DataSet3.xss">
+      <DependentUpon>DemoQuanLyDoAnTotNghiep2DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="MyDbContext.dbml.layout">
+      <DependentUpon>MyDbContext.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <None Include="DemoQuanLyDoAnTotNghiep2DataSet.xsc">
+      <DependentUpon>DemoQuanLyDoAnTotNghiep2DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DemoQuanLyDoAnTotNghiep2DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DemoQuanLyDoAnTotNghiep2DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DemoQuanLyDoAnTotNghiep2DataSet.xss">
+      <DependentUpon>DemoQuanLyDoAnTotNghiep2DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DemoQuanLyDoAnTotNghiep2DataSet1.xsc">
+      <DependentUpon>DemoQuanLyDoAnTotNghiep2DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DemoQuanLyDoAnTotNghiep2DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DemoQuanLyDoAnTotNghiep2DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DemoQuanLyDoAnTotNghiep2DataSet1.xss">
+      <DependentUpon>DemoQuanLyDoAnTotNghiep2DataSet1.xsd</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="MyDbContext.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>MyDbContext.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\luu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_accept.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Crystal_Clear_action_exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginImg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adasdasd.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\75B8vP52ZP_1534931399.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder_modified.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manager.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manager1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manager2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\manager3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\content-management %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\research.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\statistics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\project.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blueprint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\project1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blueprint1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2c705d4e904bdd346d63b4a70136139d.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2c705d4e904bdd346d63b4a70136139d %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d274506.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\funnel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rgb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Buddy-Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-img.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Subtle-Lines-Abstract-Gradient-Background-Blue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The-True-Secret-to-Increasing-Your-Productivity.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The-True-Secret-to-Increasing-Your-Productivity %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\faculty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10219manteacherlightskintone_110630.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacher %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blueprint2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Subtle-Lines-Abstract-Gradient-Background-Blue1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackGroundGradient.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackGroundGradient1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\information %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dghj.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AnhDoAn2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AnhDoAn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The-True-Secret-to-Increasing-Your-Productivity %281%291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1735096137-1-ts12.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Photoback.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dhsplogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_accept1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AnhDoAn1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AnhDoAn3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stk_education.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nav_background_l.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Subtle-Lines-Abstract-Gradient-Background-Blue2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mtech-india-signature %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-yellow-gradient-solid-geometric-background-image_132143.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Subtle-Lines-Abstract-Gradient-Background-Blue3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The-True-Secret-to-Increasing-Your-Productivity %281%292.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Photoback1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mtech-india-signature %281%291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eeeee-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgrounDA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %283%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %284%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Screenshot %2828%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %285%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gettyimages-1144937599-640x640.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dustbin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\language.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\language %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\language1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\faculty-shield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\layers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\layers %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\layers %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\language %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\language %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\language %283%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open-book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\language %283%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundfrmMain.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HinhNenTrangChu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel1">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
